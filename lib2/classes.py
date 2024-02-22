@@ -9,10 +9,10 @@ class nodo():
         strOut = ""
         strOut += f" NP[{self.valor}] "
         if type(self.Izq) != type(None):
-            strOut += f" [{self.valor}]->[{self.Izq}] "
+            strOut += f" Iz[{self.valor}]->[{self.Izq}] "
         
         if self.Der is not None:
-            strOut += f" [{self.valor}]->[{self.Der}] "
+            strOut += f" Dr[{self.valor}]->[{self.Der}] "
 
         return strOut
 
