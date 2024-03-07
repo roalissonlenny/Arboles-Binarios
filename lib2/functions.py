@@ -1,3 +1,6 @@
+from .classes import *
+
+
 def LVR( nodo, inOrderArr ):
     if nodo is not None:
         nodopadre = nodo
@@ -58,5 +61,26 @@ def printArbol( nodo ):
         printArbol ( nodopadre.Der )
 
     return 0
+
+# inicio agreganodos
+def agreganodos(currentnodo, nuevonum ):
+    cola=[]
+    cola.append(currentnodo)
+
+    while cola:
+        currentnodo = cola.pop(0)
+
+        if currentnodo.Izq is None:
+            currentnodo.Izq = nodo( nuevonum )
+            return 0
+
+        if currentnodo.Der is None:
+            currentnodo.Der = nodo( nuevonum )
+            return 0
+
+        cola.append(currentnodo.Izq)
+        cola.append(currentnodo.Der)
+    return 0
+# fin agreganodos
 
 #Proyecto-Se puede usar recursividad 

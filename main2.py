@@ -1,31 +1,37 @@
 from lib2 import *
 
+
+arraynum=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+nodoraiz = nodo( arraynum[0] )
+
+for i in range(1, len(arraynum), 1):
+    agreganodos(nodoraiz, arraynum[i])
+
+#Otras formas de hacerlo :
+#for i in arraynum:
+ #   agreganodos(nodoraiz, i)
+
+#j=1
+#while arraynum:
+#    agreganodos(nodoraiz, arraynum[j])
+#    j+=1
+
+printArbol( nodoraiz )
+
 inOrderArr=[]
+LVR (nodoraiz, inOrderArr)
+print("InOrder:", end="")
+print(inOrderArr)
+
 postOrderArr=[]
+LRV (nodoraiz, postOrderArr)
+print("PostOrder:", end="")
+print(postOrderArr)
+
 preOrderArr=[]
-
-nodo1 = nodo(1)
-nodo2 = nodo(2)
-nodo3 = nodo(3)
-nodo4 = nodo(4)
-nodo5 = nodo(5)
-nodo6 = nodo(6)
-nodo7 = nodo(7)
-
-linkhijo(nodo1, nodo2, nodo3)
-linkhijo(nodo2, nodo4, nodo5)
-linkhijo(nodo3, nodo6, nodo7)
-
-LVR (nodo1, inOrderArr)
-LRV (nodo1, postOrderArr)
-VLR (nodo1, preOrderArr)
-
-print("preOrder")
-print( preOrderArr )
-print("postOrder")
-print( postOrderArr )
-print("inOrder")
-print( inOrderArr )
+VLR (nodoraiz, preOrderArr)
+print("PreOrder:", end="")
+print(preOrderArr)
 
 print("............................")
 
